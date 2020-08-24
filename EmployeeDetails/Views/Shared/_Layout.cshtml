@@ -1,0 +1,148 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title - My ASP.NET MVC Application</title>
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    @Styles.Render("~/Content/css")
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/customstyle.css" rel="stylesheet" />
+    <link href="~/Content/demo.css" rel="stylesheet" />
+    <script src="~/Scripts/sweetalert/sweetalert.js"></script>
+    <link href="~/Scripts/sweetalert/sweetalert.css" rel="stylesheet" />
+    <link href="~/Scripts/sweetalert/sweetalert.min.css" rel="stylesheet" />
+    <link href="~/Scripts/toastr/toastr.min.css" rel="stylesheet" />
+    <script src="~/Scripts/toastr/toastr.min.js"></script>
+
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/jqueryui")
+    <script src="~/Scripts/jquery-ui.js"></script>
+    @Scripts.Render("~/bundles/jtable")
+    <script src="~/Scripts/common/InputValidations.js"></script>
+    <script src="~/Scripts/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootbox.js/5.4.0/bootbox.min.js"></script>
+    <link href="~/Scripts/jtable/themes/metro/blue/jtable.css" rel="stylesheet" />
+    <link href="~/Scripts/jtable/themes/jqueryui/jtable_jqueryui.css" rel="stylesheet" />
+    <script src="~/Scripts/jtable/external/json2.js"></script>
+    <link href="~/Content/jquery.mmenu.all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery.mmenu.min.all.js"></script>
+    <script src="~/Scripts/bootstrap-notify.js"></script>
+
+    <script type="text/javascript">
+        $(function () {
+            $('nav#menu').mmenu();
+        });
+    </script>
+    <script type="text/javascript">
+        $(document).tooltip({
+            selector: "[title]",
+            placement: "bottom",
+            trigger: "hover",
+            animation: true
+        });
+    </script>
+    <style type="text/css">
+        .jtable-page-size-change {
+            display: none;
+        }
+        .pull-right{
+            float:right !important;
+        }
+        .logouttext{
+            color:#ffffff !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="page">
+        <header>
+            <div class="container-fluid" id="header">
+                <div class="row">
+                    <div class="col-sm-6 col-md-6 mainlogo">
+                        <div class="row">
+                            <div class="menu col-md-1 col-sm-12 padding-left-right-zero clear-fix">
+                                <a href="#menu" title="Menu" style="z-index: 99999999999"></a>
+                            </div>
+                            <div class="col-md-10 col-sm-12 companylogo">
+                                <a href="#">
+                                    <img src="~/Images/licensemgmt.png">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-6 logoutbox">
+                        <a class="logouttext">
+                            <img src="~/Images/user-photo.png" width="40" />
+                            <span>Bhuvana</span>
+                            <br />
+                            <span class="pull-right">Logout</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <section id="bredcrumb">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <ul class="list-unstyled list-inline breadcrumb">
+                            <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+                            @if (!string.IsNullOrEmpty(ViewBag.Page1))
+                            {
+                                <li class="active">@ViewBag.Page1</li>
+                            }
+                            @if (!string.IsNullOrEmpty(ViewBag.Page2))
+                            {
+
+                                <li class="active">@ViewBag.Page2</li>
+                            }
+                            @if (!string.IsNullOrEmpty(ViewBag.Page3))
+                            {
+                                <li class="active">@ViewBag.Page3</li>
+                            }
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <nav id="menu">
+            <ul>
+                <li>@Html.ActionLink("Employee", "Index", "Employee")</li>
+                <li><a href="#">Menu object2</a></li>
+            </ul>
+        </nav>
+
+
+        <section id="body">
+            <div>
+                @RenderSection("featured", required: false)
+                <section class="container-fluid main-content clear-fix">
+                    @RenderBody()
+                </section>
+            </div>
+        </section>
+
+
+        <footer>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-4 col-sm-4">
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                        <span class="versiontext" style="text-align: center; display: block;">Version 1.0</span>
+                    </div>
+                    <div class="col-xs-4 col-sm-4">
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+
+        @RenderSection("scripts", required: false)
+    </div>
+
+</body>
+</html>

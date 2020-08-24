@@ -1,0 +1,184 @@
+﻿@model EmployeeDetails.Models.EmployeeDetailsModel
+@using EmployeeDetails.Models
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<section id="contentpart">
+    <div class="DivBasics padding-left-zero">
+        <div class="row">
+            <div class="col-sm-6">
+                <p class="page-name">Edit Employee</p>
+            </div>
+            <div class="col-sm-6">
+                <div class="backbtn pull-right">@Html.ActionLink("Back", "Index")</div>
+            </div>
+        </div>
+        @Html.HiddenFor(mod => mod.CreatedOn)
+        @Html.HiddenFor(mod => mod.EmployeeId)
+
+        <div class="row">
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <label class="formlabel">Employee Code</label><br />
+                    <input id="txtEmployeeCode" type="number" value="@Model.Code" max="4" class="form-control" maxlength="50" />
+                </div>
+                <div class="form-group">
+                    <label class="formlabel">First Name</label>
+                    <input id="txtFirstName" type="text" value="@Model.FirstName" class="form-control" maxlength="50" />
+                </div>
+                <div class="form-group">
+                    <label class="formlabel">Last Name</label><br />
+                    <input id="txtLastName" type="text" value="@Model.LastName" class="form-control" maxlength="50" />
+                </div>
+                <div class="form-group">
+                    <label class="formlabel">Gender</label>
+                    @Html.DropDownListFor(m => Model.Gender,
+                    new SelectList(Enum.GetValues(typeof(Gender))),
+                    "Select Gender",
+                    new { @class = "form-control" ,@id= "ddlEmployeeGender" })
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">Mobile Number</label>
+                    <input id="txtMobileNumber" type="number" value="@Model.MobileNumber" max="10" class="form-control" maxlength="50" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+
+                <div class="form-group">
+                    <label class="formlabel">Address1</label>
+                    <input id="txtAddress1" type="text" value="@Model.Address1" max="10" class="form-control" maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">Address2</label>
+                    <input id="txtAddress2" type="text" value="@Model.Address2" max="10" class="form-control" maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">City</label>
+                    <input id="txtCity" type="text" value="@Model.City" max="10" class="form-control" maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">State</label>
+                    <input id="txtState" type="text" value="@Model.State" max="10" class="form-control" maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">Country</label>
+                    <input id="txtCountry" type="text" value="@Model.Country" max="10" class="form-control" maxlength="50" />
+                </div>
+
+                <div class="form-group">
+                    <label class="formlabel">Pincode</label>
+                    <input id="txtPincode" type="number" value="@Model.Pincode" max="10" class="form-control" maxlength="50" />
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="form-group">
+                    <input type="button" value="Save" class="btn btn-primary" onclick="SaveEmployee();" />
+                    <input type="button" value="Cancel" class="btn btn-default" onclick="CancelEmployee();" />
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<script>
+    function CancelEmployee() {
+        window.location = '@Url.Action("Index", "Employee")';
+    }
+    function SaveEmployee() {
+        debugger;
+        var EmployeeObject = @Html.Raw(Json.Encode(new EmployeeDetails.Models.EmployeeDetailsModel()))
+            EmployeeObject.Id = $("#EmployeeId").val();
+        EmployeeObject.Code = $("#txtEmployeeCode").val();
+        EmployeeObject.FirstName = $("#txtFirstName").val();
+        EmployeeObject.LastName = $("#txtLastName").val();
+        EmployeeObject.MobileNumber = $("#txtMobileNumber").val();
+        EmployeeObject.Gender = $("#ddlEmployeeGender").val();
+        EmployeeObject.Address1 = $("#txtAddress1").val();
+        EmployeeObject.Address2 = $("#txtAddress2").val();
+        EmployeeObject.City = $("#txtCity").val();
+        EmployeeObject.State = $("#txtState").val();
+        EmployeeObject.Country = $("#txtCountry").val();
+        EmployeeObject.Pincode = $("#txtPincode").val();
+
+        if (ValidateEmployeeFields(EmployeeObject) == true) {
+            jQuery.ajax({
+                type: "POST",
+                url: '@Url.Action("UpdateEmployee", "Employee")',
+                data: { objData: JSON.stringify(EmployeeObject) },
+                dataType: 'json',
+                traditional: true,
+                success: function (result) {
+                    $("#EmployeeId").val(result);
+                    debugger;
+                    if (result == 0) {
+                        ShowErrorMsg(result.Error);
+                    }
+                    else if (result !="") {
+                        ShowSuccessMsg("Saved Successfully");
+                        window.location = '@Url.Action("Index", "Employee")';
+                    }
+                },
+                error: function (error) {
+                    ShowErrorMsg(error.error);
+                }
+            }).done(function () {
+            });
+    }
+}
+
+    function ValidateEmployeeFields(EmployeeObject) {
+        var valid = true;
+        if (EmployeeObject.Code == "") {
+            valid = false;
+            $("#txtEmployeeCode").addClass("RequiredFields");
+            $("#txtEmployeeCode").focus();
+        }
+        else {
+            $("#txtEmployeeCode").removeClass("RequiredFields");
+
+        }
+
+        if (EmployeeObject.FirstName == "") {
+            $("#txtFirstName").addClass("RequiredFields");
+            $("#txtFirstName").focus();
+            valid = false;
+        }
+        else {
+            $("#txtFirstName").removeClass("RequiredFields");
+        }
+        if (EmployeeObject.LastName == "") {
+            $("#txtLastName").addClass("RequiredFields");
+            $("#txtLastName").focus();
+            valid = false;
+        }
+        else {
+            $("#txtLastName").removeClass("RequiredFields");
+        }
+        if (EmployeeObject.Gender == "") {
+            $("#ddlEmployeeGender").addClass("RequiredFields");
+            $("#ddlEmployeeGender").focus();
+            valid = false;
+        }
+        else {
+            $("#ddlEmployeeGender").removeClass("RequiredFields");
+        }
+
+        if (EmployeeObject.MobileNumber == "") {
+            $("#txtMobileNumber").addClass("RequiredFields");
+            $("#txtMobileNumber").focus();
+            valid = false;
+        }
+        else {
+            $("#txtMobileNumber").removeClass("RequiredFields");
+        }
+        return valid
+    }
+</script>

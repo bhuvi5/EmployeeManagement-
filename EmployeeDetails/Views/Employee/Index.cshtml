@@ -1,0 +1,185 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@model IEnumerable<EmployeeDetails.Models.EmployeeDetailsModel>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<html>
+<head>
+    <title></title>
+    <style>
+        .jtable {
+            margin: 0px !important;
+            margin-top: 10px !important;
+        }
+
+        .jtable-page-number {
+            border: none !important;
+        }
+
+        .jtable-page-list span {
+            border: none !important;
+        }
+
+        .jtable-page-number-active {
+            font-weight: bold;
+        }
+
+        .jtable-page-list span {
+            padding: 0px 5px !important;
+        }
+    </style>
+
+
+</head>
+<body>
+
+    <section id="contentpart">
+        <div class="container-fluid padding-left-right-zero">
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <p class="page-name">Employee</p>
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <button class="btn btn-primary pull-right" id="btnNewEmployee" type="button" onclick="NewEmployee();">New Employee</button>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12 col-md-12 pagecontent padding-left-right-zero">
+                    <div id="jTableContainer" class="col-sm-12"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $('#jTableContainer').jtable({
+            paging: true,
+            pageSize: 10,
+            pageSizes: [5, 10, 20, 50],
+            sorting: true,
+            defaultSorting: 'FirstName ASC',
+            columnResizable: true,
+            columnSelectable: true,
+            saveUserPreferences: false,
+            actions: {
+                listAction: '@Url.Action("EmployeesList", "Employee")'
+
+            },
+            fields: {
+                ID: {
+                    key: true,
+                    create: false,
+                    edit: false,
+                    list: false
+                },
+                action: {
+                    title: 'Action',
+                    width: '10%',
+                    sorting: false,
+                    display: function (data) {
+                        return $('<div style="cursor:pointer; "><span title="Edit" onclick="EditRecord(\'' + data.record.EmployeeId +'\');">Edit</span><span title="Remove" style="margin-left:10px;" onclick="ConfirmWithDelete(\''+ data.record.EmployeeId +'\');">Remove</span></div>');
+                    }
+                }
+                ,
+                EmployeeCode: {
+                    title: 'Code',
+                    sorting: true,
+                    display: function (data) {
+                        return $('<p>' + data.record.Code + '</p>');
+                    }
+                },
+                FirstName: {
+                    title: 'First Name',
+                    sorting: true,
+                    display: function (data) {
+                        return $('<p>' + data.record.FirstName + '</p>');
+                    }
+                },
+                LastName: {
+                    title: 'Last Name',
+                    sorting: true,
+                    display: function (data) {
+                        return $('<p>' + data.record.LastName + '</p>');
+                    }
+                },
+                MobileNumber: {
+                    title: 'Mobile Number',
+                    sorting: true,
+                    display: function (data) {
+                        return $('<p>' + data.record.MobileNumber + '</p>');
+                    }
+                }
+            }
+        });
+        $('#jTableContainer').jtable('load');
+    });
+
+</script>
+<script type="text/javascript">
+    function NewEmployee() {
+        window.location = '@Url.Action("Create", "Employee")';
+    }
+
+    function EditRecord(ID) {
+        window.location = '@Url.Action("Edit", "Employee")?employeeId='+ ID;
+    }
+
+    function ConfirmWithDelete(Id) {
+        swal({
+            title: "",
+            title: "Delete the Record",
+            text: "Are you sure to delete the record?",
+            type: "warning",
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: "Ok",
+            cancelButtonText: "Cancel",
+        },
+            function (isConfirm) {
+                if (isConfirm) {
+                    DeleteRecord(Id);
+                } else {
+                    swal("Cancelled", "You have Cancelled Form Submission!", "error");
+                }
+            });
+    }
+
+    function DeleteRecord(ID) {
+        if (ID !=null) {
+
+            $.ajax({
+                        url: '@Url.Action("DeleteEmployeeDetails", "Employee")',
+                        type: "POST",
+                        dataType: "json",
+                        traditional: true,
+                        data: { employeeId: ID },
+                        success: function (result) {
+                            var obj = result;
+                            if (obj == true) {
+                                ShowSuccessMsg('Deleted Successfully');
+                                window.location = '@Url.Action("Index", "Employee")';
+                            }
+                            else {
+                                ShowErrorMsg('This Employee having Address, so can not be deleted');
+                            }
+                        },
+                        error: function (error) {
+                            ShowErrorMsg(error);
+                        }
+                    });
+        }
+    }
+</script>
+
+

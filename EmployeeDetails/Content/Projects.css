@@ -1,0 +1,50 @@
+﻿  .DynamicDynamicLevels {
+        border-radius: 5px !important;
+        border: 1px solid #ececec !important;
+    }
+
+    .Levelclass {
+        background-color: #f1f1f1;
+        border: 1px solid #ececec;
+        margin-top: 10px;
+        cursor: pointer;
+    }
+
+    label {
+        padding-left: 10px;
+    }
+
+    .form-group {
+        margin: 5px 0px;
+        border-radius: 0px;
+    }
+
+    .RequiredFields {
+        border: 1px solid red;
+    }
+
+    .jtable-page-size-change {
+        display: none;
+    }
+
+    .jtable-goto-page {
+        display: none !important;
+    }
+
+    .jtable-page-info {
+        display: none !important;
+    }
+
+    .jtable-page-list {
+        margin-bottom: 10px;
+    }
+
+    .superScript {
+        font-size: 9px;
+        margin: 0px 7px;
+        color: gray;
+    }
+
+    .spanHead {
+        font-size: 18px;
+    }

@@ -1,0 +1,250 @@
+﻿.jtable-data-row td {
+    padding: 0px !important;
+}
+
+.jtable-page-list {
+    height: 15px !important;
+    padding: 1px !important;
+    margin: 0px;
+    border: 0px;
+    background-color: #ffffff !important;
+}
+
+.jtable-page-list span {
+        font-size: 12px !important;
+        padding: 0px 4px !important;
+        margin: 0px;
+        border: 0px;
+        background-color: #ffffff !important;
+        /*border-right: 1px !important;*/
+}
+
+.popupdiv {
+    width: 100%;
+    padding-left: 7px;
+}
+
+    .popupdiv p {
+        font-size: 13px !important;
+        margin-bottom: 2px;
+        padding: 5px 2px;
+         vertical-align:bottom;
+    }
+
+.activeRow {
+    width: 100%;
+    padding-left: 7px;
+    background-color: #e5e3e3;
+}
+
+.popupdiv1 {
+    width: 100%;
+    padding-left: 7px;
+}
+
+    .popupdiv1 p {
+        font-size: 13px !important;
+        margin-bottom: 2px;
+        padding: 5px 2px;
+        vertical-align:bottom;
+    }
+
+.activeRow1 {
+    width: 100%;
+    padding-left: 7px;
+    background-color: #e5e3e3;
+}
+
+.popupdiv:hover {
+    width: 100%;
+    padding-left: 7px;
+    background-color: #e5e3e3;
+}
+
+.popupdiv1:hover {
+    width: 100%;
+    padding-left: 7px;
+    background-color: #e5e3e3;
+}
+
+.Addpopupdiv {
+    width: 100%;
+    padding: 4px;
+}
+
+.web_ReIns_dialog_overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #000000;
+    opacity: .15;
+    filter: alpha(opacity=15);
+    -moz-opacity: .15;
+    z-index: 101;
+    display: none;
+}
+
+.web_ReIns_dialog {
+    display: none;
+    position: fixed;
+    width: 29.333%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    cursor: pointer;
+    margin-left: 111px;
+    margin-top: -142px;
+    padding: 0px;
+    z-index: 102;
+    font: 12px/16px "segoe ui",arial,sans-serif;
+    background-color: #fff;
+    border: 1px solid #ececec;
+}
+
+.web_ReIns_dialog_title {
+    padding: 4px;
+    color: #254C7A;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+    .web_ReIns_dialog_title a {
+        color: black;
+        text-decoration: none;
+    }
+
+.DivImage {
+    background-color: #ffffff;
+    width: 100%;
+    height: auto;
+    max-height: 340px;
+    border: 1px solid #d5d5d5 !important;
+    margin-left: 0px;
+    -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, .175);
+}
+
+.web_dialog_table {
+    padding-left: 0px;
+    padding-top: 0px;
+    width: 100%;
+    float: right;
+}
+
+.web_dialog_label {
+    font-size: 14px !important;
+    font-weight: normal !important;
+    cursor: pointer;
+    margin-top: 3px;
+}
+
+.web_dialog_table-span {
+    padding-right: 5px;
+    float: right;
+}
+
+.jtable {
+    border: 0px !important;
+}
+
+div.jtable-main-container table.jtable tbody > tr > td:first-child {
+    /*border-left: 1px solid #ddd !important;*/
+    border: 0px !important;
+}
+
+div.jtable-main-container table.jtable tbody > tr > td {
+    /*border-left: 1px solid #ddd !important;*/
+    border: 0px !important;
+}
+
+div.jtable-main-container table.jtable tbody > tr {
+    /*border-left: 1px solid #ddd !important;*/
+    border: 0px !important;
+}
+
+div.jtable-main-container > table.jtable > thead {
+    /*background-color: #ffffff !important;*/
+    display: none;
+}
+
+div.jtable-main-container table.jtable thead th {
+    border-right: 0px solid #d5d5d5;
+    padding-left: 0px !important;
+    font-size: 14px !important;
+}
+
+    div.jtable-main-container table.jtable thead th.jtable-column-header div.jtable-column-header-container {
+        display: none !important;
+    }
+
+div.jtable-main-container {
+    background-color: #FFFFFF !important;
+    margin-top: 18px;
+}
+
+.jtable-bottom-panel {
+    border: 0px !important;
+    background-color: #FFFFFF !important;
+    padding-bottom: 5px !important;
+    border-top:1px solid #ececec !important;
+}
+
+.add-input-select {
+    padding-right: 0px;
+}
+
+.jtable-column-header {
+    display: none !important;
+}
+
+.jtable-column-header-container {
+    display: none !important;
+}
+
+.jtable {
+    margin: 0px !important;
+}
+
+div.jtable-main-container div.jtable-bottom-panel {
+    margin-bottom: 2px;
+}
+
+.jtable-data-row {
+    background-color: #fff !important;
+}
+.jtable-right-area {
+    padding:0px !important;
+    margin:0px !important;
+}
+/*.jtable-page-number-disabled {
+    display: none !important;
+}*/
+.jtable-page-number {
+    display:none !important;
+    border:none !important;
+}
+.jtable-page-number-space {
+        display:none !important;
+
+}
+/*.jtable-page-number-last {
+      display:none !important;
+}*/
+.jtable-left-area {
+ display:none !important;
+}
+.jtable-page-number-previous
+{
+    border:none !important;
+    font-size:12px !important;
+}
+.jtable-page-number-next
+{
+    border:none !important;
+}

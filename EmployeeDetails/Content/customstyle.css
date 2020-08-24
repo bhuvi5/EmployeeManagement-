@@ -1,0 +1,751 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+body {
+    font-family: 'Segoe UI';
+    border: 0px !important;
+}
+
+.padding-left-right-zero {
+    padding-right: 0px !important;
+    padding-left: 0px !important;
+}
+
+.padding-left-zero {
+    padding-left: 0px;
+}
+
+.padding-right-zero {
+    padding-right: 0px;
+}
+
+.padding-top-zero {
+    padding-top: 0px;
+}
+
+.padding-bottom-zero {
+    padding-bottom: 0px;
+}
+
+.padding-top-bottom-zero {
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+#header {
+    /*border-bottom: 1px solid #c9c9c9;
+    padding: 4px 0px;
+    padding: 6px 0px 0px 0px;
+    background-color: #035681;*/
+}
+
+    #header .companylogo {
+        padding-bottom: 1px;
+    }
+
+.Levelclass {
+    background-color: #f1f1f1;
+    border: 1px solid #ececec;
+    margin-top: 10px;
+}
+
+.productname {
+    font-family: "Segoe UI";
+    color: #fefefe;
+    font-size: 20px;
+    font-weight: 400;
+    padding-top: 10px;
+    margin-bottom: 0px;
+    text-transform: uppercase;
+}
+
+.welcomeuser {
+    display: block;
+    float: right;
+    margin-right: 5px;
+}
+
+    .welcomeuser p {
+        color: #fff;
+        font-size: 15px;
+        padding-top: 0px;
+        margin-left: 0px;
+        margin-bottom: 0px;
+        line-height: 14px;
+    }
+
+    .welcomeuser img {
+        padding-right: 0px;
+        padding-top: 4px;
+        margin-right: 5px;
+    }
+
+    .welcomeuser .dropdown-toggle {
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+        color: #ffffff !important;
+        padding: 13px 10px;
+    }
+
+div.open .logoutcntr {
+    margin-top: 6px;
+}
+
+div.open img {
+    margin-top: -6px;
+}
+
+.welcomeuser button:hover {
+    color: #ffffff;
+}
+
+#header div.open .logoutcntr {
+    background-color: #f4f4f4 !important;
+}
+
+#header div.open span {
+    color: #000000 !important;
+}
+
+.welcomeuser .dropdown-menu {
+    width: 100%;
+    min-width: 250px;
+    border-radius: 0px;
+    margin-top: 0px;
+    right: -1px;
+    background-color: #f4f4f4;
+    border-top: 0px;
+    -webkit-box-shadow: 0 8px 12px rgba(0, 0, 0, .175);
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, .175);
+    padding: 20px 15px 15px 15px;
+}
+
+    .welcomeuser .dropdown-menu .logoutbtn {
+        min-width: 110px;
+        background-color: #f4f4f4;
+        color: #666666;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+    }
+
+.logoutimg img {
+    float: left;
+    padding-right: 0px;
+    border: 1px solid #cccccc;
+    padding-top: 0px;
+    margin-right: 0px;
+}
+
+.logoutcontent {
+    padding: 0px;
+}
+
+    .logoutcontent p {
+        font-size: 16px;
+        color: #333333;
+    }
+
+    .logoutcontent label {
+        font-size: 12px;
+        color: #337AB7;
+        padding-left: 0px !important;
+    }
+
+.logoutbtn:hover {
+    background-color: #ffffff !important;
+    color: #666666;
+}
+
+@media (max-width:768px) {
+    .versiontext {
+        font-size: 9px !important;
+        line-height: 12px;
+    }
+
+    #footer {
+        height: auto !important;
+    }
+}
+
+#bredcrumb {
+    background-color: #f5f5f5;
+}
+
+#content {
+    margin-top: 15px;
+}
+
+.page-name {
+    font-family: "Segoe UI";
+    color: #29668b;
+    font-size: 20px;
+    font-weight: 400;
+    margin-bottom: 15px !important;
+    padding-top: 2px;
+}
+
+.grid-controls {
+    margin-top: -25px;
+}
+
+    .grid-controls span {
+        margin-left: 5px;
+        color: #666666;
+    }
+
+.actioncntr a {
+    color: #666666;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+    .actioncntr a i {
+        margin-right: 5px;
+        color: #707070;
+    }
+
+.layout {
+    padding: 10px;
+    border: 1px solid #ececec;
+}
+
+.formlabel {
+    font-size: 16px;
+    font-family: "Segoe UI";
+    font-weight: normal;
+}
+
+.formcntr {
+    margin-top: 15px;
+}
+
+.dropdown-menu {
+    width: 400px;
+    padding: 15px;
+}
+
+.ProjectAdd-input {
+    padding-right: 0PX !IMPORTANT;
+}
+
+    .ProjectAdd-input .form-control {
+        width: 91%;
+        margin-right: 3px;
+    }
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .dropdown-menu {
+        width: 300px;
+        padding: 15px;
+    }
+
+    .ProjectAdd-input .form-control {
+        width: 83%;
+        margin-right: 3px;
+    }
+
+    .companylogo {
+        padding-left: 35px;
+    }
+}
+
+@media (max-width: 480px) {
+    .dropdown-menu {
+        width: 250px;
+        padding: 15px;
+    }
+
+    .companylogo {
+        padding-left: 35px;
+    }
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .ProjectAdd-input .form-control {
+        width: 87%;
+        margin-right: 3px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .ProjectAdd-input .form-control {
+        width: 94%;
+        margin-right: 3px;
+    }
+}
+
+.RequiredFields {
+    border: 1px solid red !important;
+}
+
+.add-btn {
+    background-image: url(../Images/addd.png) !important;
+    background-repeat: no-repeat;
+    width: 34px !important;
+    height: 34px !important;
+    background-color: transparent !important;
+    border: none !important;
+}
+
+#RecordLog {
+    background-color: #f1f1f1;
+    width: 100%;
+    height: 36px;
+    position: fixed;
+    bottom: 36px;
+    font-size: 12px;
+    color: #2d2d2d;
+    padding: 5px;
+    z-index: 10;
+}
+
+    #RecordLog Label {
+        font-size: 13px !important;
+    }
+
+footer {
+    background: #acacac;
+    width: 100%;
+    height: 36px;
+    position: fixed;
+    bottom: 0;
+    font-size: 13px;
+    color: #2d2d2d;
+    padding-top: 7px;
+    z-index: 10;
+}
+
+    footer a {
+        color: #2d2d2d !important;
+    }
+
+.glyphicon-chevron-up {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.glyphicon-chevron-down {
+    margin-top: 5px;
+    margin-right: 10px;
+}
+
+.FromTimeInput {
+    margin-left: 5px;
+}
+
+.jtable-column-header {
+    background-color: #e3e3e3 !important;
+    height: 45px !important;
+    font-family: 'Segoe UI' !important;
+    font-weight: bold !important;
+    color: #4d4b4b !important;
+}
+
+.jtable-page-size-change {
+    margin-bottom: 10px !important;
+}
+
+.jtable {
+    margin-top: 10px !important;
+}
+/*grid css*/
+#grid {
+    margin-bottom: 0px;
+}
+
+table {
+    width: 100%;
+    color: #4d4b4b;
+    font-family: 'Segoe UI';
+}
+
+.grid-header {
+    background-color: #e3e3e3;
+    height: 45px;
+    font-family: 'Segoe UI';
+    font-weight: bold;
+    color: #4d4b4b;
+    min-width: 100px;
+}
+
+table tr td, table tr th {
+    padding-left: 10px;
+    max-width: 200px !important;
+}
+
+td {
+    max-width: 200px !important;
+}
+
+.grid-header a {
+    color: #4d4b4b;
+    max-width: 200px;
+}
+
+#grid table tr {
+    height: 45px;
+    border-bottom: 1px solid #d3d3d3;
+    background-color: #fbfbfb;
+}
+
+tr:nth-child(even) {
+    height: 45px;
+    background-color: #fff;
+}
+
+.alternate-row {
+    height: 45px;
+    background-color: #fff;
+}
+
+.grid-pager {
+    height: 45px;
+    background-color: #e3e3e3;
+    margin: 0px 15px 20px 15px;
+    padding: 4px 0px;
+    border-top: 1px solid #e3e3e3;
+}
+
+.gridPageNavigation {
+    padding-top: 5px;
+}
+
+.grid-pager div {
+    background-color: #e3e3e3;
+}
+/*grid css*/
+.input-group-btn:last-child > .btn {
+    border-top-right-radius: 4px !important;
+    border-bottom-right-radius: 4px !important;
+}
+
+.input-group .form-control:not(:first-child):not(:last-child) {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+.Levelclass .glyphicon {
+    padding: 4px 10px 0px 0px !important;
+}
+
+.xdsoft_calendar table tr {
+    height: 20px !important;
+}
+
+
+/*custom radio button*/
+input[type=radio].css-checkbox {
+    position: absolute;
+    z-index: -1000;
+    left: -1000px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    width: 1px;
+    margin: -1px;
+    padding: 0;
+    border: 0;
+}
+
+    input[type=radio].css-checkbox + label.css-label {
+        padding-left: 26px;
+        height: 20px;
+        display: inline-block;
+        line-height: 20px;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        font-size: 26px;
+        vertical-align: middle;
+        cursor: pointer;
+        margin-right: 15px;
+    }
+
+    input[type=radio].css-checkbox:checked + label.css-label {
+        background-position: 0 -20px;
+    }
+
+label.css-label {
+    background-image: url(../Images/custom-radio.png);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-top: 0px;
+    margin-bottom: 0px;
+}
+/*custom radio button*/
+
+.imgWrap:hover .imgDescription {
+    visibility: visible;
+    opacity: 1;
+}
+
+.imgWrap {
+    position: relative;
+    display: block;
+    height: auto;
+    overflow: hidden;
+    min-width: 120px;
+    max-width: 200px;
+}
+
+.imgDescription img {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.imgDescription {
+    position: absolute;
+    top: 0px;
+    bottom: -10px;
+    left: 0px;
+    right: 0px;
+    background-image: url(../Images/user-profile-hover-bg.png);
+    text-align: center;
+    vertical-align: middle !important;
+    visibility: hidden;
+    opacity: 0;
+}
+
+    .imgDescription label:first-child img {
+        float: left;
+        display: block;
+        cursor: pointer;
+        margin: 8px;
+    }
+
+    .imgDescription label:last-child img {
+        float: left;
+        display: block;
+        margin: 8px 8px 8px 35px;
+        cursor: pointer;
+    }
+
+#imgUserPhoto {
+    min-width: 120px;
+    max-width: 200px;
+    border: 1px solid #cccccc;
+}
+
+#imgUserSignature {
+    min-width: 120px;
+    max-width: 300px;
+    max-height: 200px;
+    border: 1px solid #cccccc;
+}
+
+.imgWrap {
+    float: right;
+}
+
+.UploadSign {
+    color: #286090;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.modal-backdrop.in {
+    min-height: 2000px !important;
+    height: auto !important;
+}
+
+.form-control-Clear {
+    position: absolute;
+    top: 0;
+    right: 40px;
+    z-index: 2000;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: #cccccc;
+    cursor: pointer;
+}
+
+.dropdown-toggle {
+    border-top-left-radius: 4px !important;
+    border-bottom-left-radius: 4px !important;
+}
+
+
+/*Customized jTable designs*/
+
+.jtable {
+    margin: 0px !important;
+    margin-top: 10px !important;
+}
+
+.jtable-page-number {
+    border: none !important;
+}
+
+.jtable-page-list span {
+    border: none !important;
+}
+
+.jtable-page-number-active {
+    font-weight: bold;
+}
+
+.jtable-page-list span {
+    padding: 0px 5px !important;
+}
+
+
+
+.treeview ul {
+    font: 14px Arial, Sans-Serif;
+    margin: 0px;
+    padding-left: 20px;
+    list-style: none;
+}
+
+
+/*customer license css*/
+html {
+  background-color: #FFFFFF;
+}
+.main-content {
+  background: none;
+  padding: 15px 30px 30px 30px;
+}
+header {
+  padding: 7px 0px 3px 0px;
+  background-color: #035681;
+}
+.mainlogo:hover {
+  background-color:transparent;
+}
+#login {
+  /*display: none;*/
+}
+.logoutbox {
+  float:right;
+}
+.logouttext {
+  color:#ffffff;
+  float:right;
+  padding: 4px 5px 4px 9px;
+}
+.logouttext img {
+  padding-right:5px;
+}
+.logouttext:hover {
+  background-color:transparent;
+  color:#ffffff;
+  cursor:pointer;
+}
+#body {
+  background-color: #ffffff;
+  clear: both;
+  padding-bottom: 0px;
+}
+.breadcrumb > li {
+  padding-left:0px;
+  padding-right:0px;
+}
+.breadcrumb {
+  padding: 3px 17px;
+}
+  .breadcrumb a:hover {
+    background-color: transparent;
+  }
+.pagecontent {
+  margin-top:20px;
+}
+#contentpart {
+  margin-bottom:100px;
+}
+.btn-primary {
+  color: #fff;
+  background-color: #337ab7 !important;
+  border-color: #2e6da4 !important;
+}
+.btn {
+  padding: 6px 12px !important;
+  margin-bottom: 0;
+  font-size: 14px  !important;
+  font-weight: normal  !important;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+}
+.btn-primary:hover {
+  color: #fff;
+  background-color: #286090 !important;
+  border-color: #204d74 !important;
+}
+.backbtn a {
+  color:#ffffff;
+    display: inline-block;
+  color: #fff;
+  background-color: #337ab7 ;
+  border-color: #2e6da4 ;
+  padding: 6px 12px !important;
+  margin-bottom: 0;
+  margin-left:10px;
+  font-size: 14px  !important;
+  font-weight: normal  !important;
+  cursor: pointer;
+  background-image: none;
+}
+.backbtn a:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+  text-decoration:none;
+}
+.smalllabel strong {
+    font-size: 14px;
+  font-family: "Segoe UI";
+  padding-right:5px;
+  margin-top:5px;
+}
+.smalllabel {
+    font-size: 13px;
+  font-family: "Segoe UI";
+  font-weight: normal;
+   margin-top:5px;
+}
+.seperation {
+  margin-top:40px;
+}
+.mainlogo {
+  padding-left:35px;
+}
+div.jtable-main-container div.jtable-bottom-panel {
+  background-color: #E3E3E3 !important;
+  padding: 9px 3px !important;
+}
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number-disabled {
+  background-color: transparent !important;
+  padding-top: 8px !important;
+}
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number-previous, 
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number-next,
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number-last,
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number,
+div.jtable-main-container > div.jtable-bottom-panel .jtable-page-list .jtable-page-number-first {
+  background-color: transparent !important;
+  padding-top: 8px !important;
+}
+.close {
+  font-size: 23px;
+}
+.btn-default {
+    color: #666666;
+    /* background-color: #f0f0f0; */
+    border:1px solid #eeeeee !important;
+    font-family: 'Segoe UI';
+}
+.companylogo a:hover {
+  background-color: transparent;
+}
+/*customer license css*/
